@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html ng-app="Demo" ng-controller="AppController">
+<head>
+	<meta charset="utf-8" />
+
+	<title ng-bind="windowTitle">Adopt-A-Pet</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/app/css/main.css"></link>
+</head>
+<body>
+
+	<h1>
+		Adopt-A-Pet
+	</h1>
+
+	<p class="primary-nav">
+		<a href="#/home" ng-class="{ on: ( subview == 'home' ) }">Home</a>
+		<a href="#/pets" ng-class="{ on: ( subview == 'pets' ) }">Pets</a>
+		<a href="#/contact" ng-class="{ on: ( subview == 'contact' ) }">Contact</a>
+	</p>
+
+	<div ng-switch="subview">
+		<div ng-switch-when="contact" ng-include=" 'assets/app/views/contact/index.htm' "></div>
+		<div ng-switch-when="home" ng-include=" 'assets/app/views/home/index.htm' "></div>
+		<div ng-switch-when="pets" ng-include=" 'assets/app/views/pets/index.htm' "></div>
+	</div>
+
+
+	<!-- Load vendor scripts. -->
+	<script type="text/javascript" src="assets/vendor/jquery/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="assets/vendor/angularjs/angular.min.js"></script>
+
+	<!-- Load AngularJS application module. -->
+	<script type="text/javascript" src="assets/app/main.js"></script>
+
+	<!-- Load Controllers. -->
+	<script type="text/javascript" src="assets/app/controllers/contact/contact-controller.js"></script>
+	<script type="text/javascript" src="assets/app/controllers/home/home-controller.js"></script>
+	<script type="text/javascript" src="assets/app/controllers/pets/pets-controller.js"></script>
+	<script type="text/javascript" src="assets/app/controllers/app-controller.js"></script>
+
+	<!-- Load Services. -->
+	<script type="text/javascript" src="assets/app/services/request-context.js"></script>
+	
+	<!-- Load Beans. -->
+	<script type="text/javascript" src="assets/app/beans/render-context.js"></script>
+
+</body>
+</html>

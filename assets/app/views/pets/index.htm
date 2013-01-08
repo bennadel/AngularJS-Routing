@@ -1,0 +1,13 @@
+
+<div ng-controller="pets.PetsController">
+
+	<h2>
+		Pets
+	</h2>
+
+	<div ng-switch="subview">
+		<div ng-switch-when="categories" ng-include=" 'assets/app/views/pets/categories.htm' "></div>
+		<div ng-switch-when="list" ng-include=" 'assets/app/views/pets/list.htm' "></div>
+	</div>
+
+</div>
