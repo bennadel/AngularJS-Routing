@@ -16,43 +16,43 @@ Demo.config(
 			.when(
 				"/home",
 				{
-					action: "home"
+					action: "splash.home"
 				}
 			)
 			.when(
 				"/pets",
 				{
-					action: "pets.categories"
+					action: "standard.pets.categories"
 				}
 			)
 			.when(
 				"/pets/:category",
 				{
-					action: "pets.list"
+					action: "standard.pets.list"
 				}
 			)
 			.when(
 				"/pets/:category/:id",
 				{
-					action: "pets.detail.overview"
+					action: "standard.pets.detail.overview"
 				}
 			)
 			.when(
 				"/pets/:category/:id/diet",
 				{
-					action: "pets.detail.diet"
+					action: "standard.pets.detail.diet"
 				}
 			)
 			.when(
 				"/pets/:category/:id/medical-history",
 				{
-					action: "pets.detail.medicalHistory"
+					action: "standard.pets.detail.medicalHistory"
 				}
 			)
 			.when(
 				"/contact",
 				{
-					action: "contact"
+					action: "standard.contact"
 				}
 			)
 			.otherwise(

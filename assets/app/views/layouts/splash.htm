@@ -1,0 +1,12 @@
+
+<div ng-controller="layouts.SplashController" class="l-splash">
+
+	<h1>
+		Adopt-A-Pet
+	</h1>
+
+	<div ng-switch="subview">
+		<div ng-switch-when="home" ng-include=" 'assets/app/views/home/index.htm' "></div>
+	</div>
+
+</div>

@@ -1,3 +1,30 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+div.l-splash {
+  border: 1px solid #CCCCCC ;
+  -webkit-border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  border-radius: 7px 7px 7px 7px;
+  margin: 30px auto 50px auto ;
+  width: 600px ;
+}
+div.l-standard {
+  border: 1px solid #CCCCCC ;
+  -webkit-border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  border-radius: 7px 7px 7px 7px;
+  margin: 30px auto 50px auto ;
+  width: 600px ;
+}
 p.primary-nav {
   border: 1px solid #333333 ;
   border-width: 1px 0px 1px 0px ;
