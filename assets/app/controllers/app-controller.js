@@ -36,7 +36,7 @@
 
 
 			// Get the render context local to this controller (and relevant params).
-			var renderContext = requestContext.getRenderContext()
+			var renderContext = requestContext.getRenderContext();
 
 			
 			// --- Define Scope Variables. ---------------------- //

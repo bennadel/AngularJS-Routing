@@ -3,7 +3,7 @@
 	"use strict";
 
 	app.controller(
-		"pets.CategoriesController",
+		"layouts.StandardController",
 		function( $scope, requestContext ) {
 
 
@@ -23,7 +23,7 @@
 
 
 			// Get the render context local to this controller (and relevant params).
-			var renderContext = requestContext.getRenderContext( "pets.categories" );
+			var renderContext = requestContext.getRenderContext( "standard" );
 
 			
 			// --- Define Scope Variables. ---------------------- //
