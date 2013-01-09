@@ -11,11 +11,20 @@
 <body>
 
 	<div ng-switch="subview">
+		<!--
+			This subview will show while the AngularJS app is loading since it's visible right in 
+			the page. Once the app kicks in, however, the calculated subview will determine the
+			appropriate layout to render.
+		-->
 		<div ng-switch-when="loading">
+			
 			<p>
 				Loading.
 			</p>	
+
 		</div>
+
+		<!-- Core layouts. -->
 		<div ng-switch-when="splash" ng-include=" 'assets/app/views/layouts/splash.htm' "></div>
 		<div ng-switch-when="standard" ng-include=" 'assets/app/views/layouts/standard.htm' "></div>
 	</div>

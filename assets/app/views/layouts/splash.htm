@@ -1,12 +1,36 @@
 
 <div ng-controller="layouts.SplashController" class="l-splash">
 
-	<h1>
-		Adopt-A-Pet
-	</h1>
+	<div class="l-container">
 
-	<div ng-switch="subview">
-		<div ng-switch-when="home" ng-include=" 'assets/app/views/home/index.htm' "></div>
+		<div class="l-header" data-photo-credit="http://www.flickr.com/photos/kakissel/7182285229">
+
+			<h1>
+				Adopt<br />
+				A<br />
+				Pet
+			</h1>
+
+		</div>
+
+		<div ng-switch="subview" class="l-body">
+			<div ng-switch-when="home" ng-include=" 'assets/app/views/home/index.htm' "></div>
+		</div>
+
+	</div>
+
+	<div class="l-footer">
+
+		<div class="description">
+			This is a sample application intended to demonstrate one way to handle
+			deep-routing in AngularJS.
+		</div>
+
+		<div class="author">
+			By <a href="http://www.bennadel.com" target="_blank">Ben Nadel ( www.bennadel.com )</a>
+			&copy; {{ copyrightYear }}
+		</div>
+
 	</div>
 
 </div>

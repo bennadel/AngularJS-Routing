@@ -1,7 +1,60 @@
 
 div.l-splash {
-	border: 1px solid #CCCCCC ;
-	.border-radius( 7px 7px 7px 7px );
 	margin: 30px auto 50px auto ;
 	width: 600px ;
+
+	div.l-container {
+		.border-radius( 7px 7px 7px 7px );
+		.box-shadow( 0px 0px 5px 1px #666666 ) ;
+		padding: 0px 0px 1px 0px ;
+	}
+
+	div.l-header {
+		background: url( "../img/header-puppy.jpg" ) 0px 0px no-repeat ;
+		.border-radius( 6px 6px 0px 0px ) ;
+		height: 305px ;
+		position: relative ;
+
+		h1 {
+			color: #FFFFFF ;
+			font-family: Georgia, serif ;
+			font-size: 50px ;
+			font-weight: bold ;
+			line-height: 65px ;
+			margin: 0px 0px 0px 0px ;
+			padding: 0px 0px 0px 0px ;
+			position: absolute ;
+			right: 0px ;
+			text-align: center ;
+			text-shadow: 1px 1px #000000 ;
+			top: 53px ;
+			width: 275px ;
+		}
+	}
+
+	div.l-body {
+		margin: 20px 20px 20px 20px ;
+	}
+
+	div.l-footer {
+		color: #999999 ;
+		font-size: 11px ;
+		margin: 20px 20px 20px 20px ;
+
+		div.description {
+			margin-bottom: 7px ;
+		}
+
+		div.author {
+			a {
+				color: #999999 ;
+				text-decoration: none ;
+
+				&:hover {
+					color: #333333 ;
+					text-decoration: underline ;
+				}
+			}
+		}
+	}
 }

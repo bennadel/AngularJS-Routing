@@ -1,7 +1,90 @@
 
 div.l-standard {
-	border: 1px solid #CCCCCC ;
-	.border-radius( 7px 7px 7px 7px );
 	margin: 30px auto 50px auto ;
 	width: 600px ;
+
+	div.l-container {
+		.border-radius( 7px 7px 7px 7px );
+		.box-shadow( 0px 0px 5px 1px #666666 ) ;
+		padding: 0px 0px 1px 0px ;
+	}
+
+	div.l-header {
+		h1 {
+			color: #333333 ;
+			font-family: Georgia, serif ;
+			font-size: 28px ;
+			font-weight: bold ;
+			line-height: 26px ;
+			margin: 0px 0px 0px 0px ;
+			padding: 30px 20px 30px 20px ;
+		}
+
+		ul {
+			border: 1px solid #333333 ;
+			border-width: 1px 0px 1px 0px ;
+			font-size: 16px ;
+			height: 35px ;
+			list-style-type: none ;
+			margin: 0px 0px 0px 0px ;
+			padding: 0px 0px 0px 0px ;
+
+			li {
+				background-color: #F0F0F0 ;
+				border-right: 1px solid #CCCCCC ;
+				float: left ;
+				margin: 0px 0px 0px 0px ;
+				padding: 0px 0px 0px 0px ;
+
+				a {
+					display: block ;
+					height: 35px ;
+					line-height: 35px ;
+					text-align: center ;
+					text-decoration: none ;
+					width: 100px ;
+				}
+
+				// li -- variations.
+
+				&:first-child {
+					border-left: 1px solid #CCCCCC ;
+				}
+
+				&.on {
+					a {
+						background-color: #262626 ;
+						color: #FFFFFF ;
+						font-weight: bold ;
+					}
+				}
+			}
+		}
+	}
+
+	div.l-body {
+		margin: 20px 20px 20px 20px ;
+	}
+
+	div.l-footer {
+		color: #999999 ;
+		font-size: 11px ;
+		margin: 20px 20px 20px 20px ;
+
+		div.description {
+			margin-bottom: 7px ;
+		}
+
+		div.author {
+			a {
+				color: #999999 ;
+				text-decoration: none ;
+
+				&:hover {
+					color: #333333 ;
+					text-decoration: underline ;
+				}
+			}
+		}
+	}
 }

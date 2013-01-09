@@ -1,20 +1,48 @@
 
 <div ng-controller="layouts.StandardController" class="l-standard">
 
-	<h1>
-		Adopt-A-Pet
-	</h1>
+	<div class="l-container">
 
-	<p class="primary-nav">
-		<a href="#/home" ng-class="{ on: ( subview == 'home' ) }">Home</a>
-		<a href="#/pets" ng-class="{ on: ( subview == 'pets' ) }">Pets</a>
-		<a href="#/contact" ng-class="{ on: ( subview == 'contact' ) }">Contact</a>
-	</p>
+		<div class="l-header">
 
-	<div ng-switch="subview">
-		<div ng-switch-when="contact" ng-include=" 'assets/app/views/contact/index.htm' "></div>
-		<div ng-switch-when="home" ng-include=" 'assets/app/views/home/index.htm' "></div>
-		<div ng-switch-when="pets" ng-include=" 'assets/app/views/pets/index.htm' "></div>
+			<h1>
+				Adopt-A-Pet
+			</h1>
+
+			<ul>
+				<li ng-class="{ on: ( subview == 'home' ) }">
+					<a href="#/home">Home</a>
+				</li>
+				<li ng-class="{ on: ( subview == 'pets' ) }">
+					<a href="#/pets">Pets</a>
+				</li>
+				<li ng-class="{ on: ( subview == 'contact' ) }">
+					<a href="#/contact">Contact</a>
+				</li>
+			</ul>
+
+		</div>
+
+		<div ng-switch="subview" class="l-body">
+			<div ng-switch-when="contact" ng-include=" 'assets/app/views/contact/index.htm' "></div>
+			<div ng-switch-when="home" ng-include=" 'assets/app/views/home/index.htm' "></div>
+			<div ng-switch-when="pets" ng-include=" 'assets/app/views/pets/index.htm' "></div>
+		</div>
+
+	</div>
+
+	<div class="l-footer">
+
+		<div class="description">
+			This is a sample application intended to demonstrate one way to handle
+			deep-routing in AngularJS.
+		</div>
+
+		<div class="author">
+			By <a href="http://www.bennadel.com" target="_blank">Ben Nadel ( www.bennadel.com )</a>
+			&copy; {{ copyrightYear }}
+		</div>
+
 	</div>
 
 </div>
