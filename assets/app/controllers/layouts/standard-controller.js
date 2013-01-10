@@ -4,7 +4,7 @@
 
 	app.controller(
 		"layouts.StandardController",
-		function( $scope, requestContext ) {
+		function( $scope, requestContext, _ ) {
 
 
 			// --- Define Controller Methods. ------------------- //

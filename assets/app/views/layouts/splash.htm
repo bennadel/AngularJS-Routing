@@ -1,25 +1,37 @@
 
 <div ng-controller="layouts.SplashController" class="l-splash">
 
+
+	<!-- BEGIN: Layout Container. -->
 	<div class="l-container">
 
+
+		<!-- BEGIN: Layout Header. -->
 		<div class="l-header" data-photo-credit="http://www.flickr.com/photos/kakissel/7182285229">
 
-			<h1>
+			<span class="title">
 				Adopt<br />
 				A<br />
 				Pet
-			</h1>
+			</span>
 
 		</div>
+		<!-- END: Layout Header. -->
 
+
+		<!-- Include Body Content. -->
 		<div ng-switch="subview" class="l-body">
 			<div ng-switch-when="home" ng-include=" 'assets/app/views/home/index.htm' "></div>
 		</div>
 
-	</div>
 
+	</div>
+	<!-- END: Layout Container. -->
+
+
+	<!-- BEGIN: Layout Footer. -->
 	<div class="l-footer">
+
 
 		<div class="description">
 			This is a sample application intended to demonstrate one way to handle
@@ -31,6 +43,9 @@
 			&copy; {{ copyrightYear }}
 		</div>
 
+
 	</div>
+	<!-- END: Layout Footer. -->
+
 
 </div>

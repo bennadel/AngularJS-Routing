@@ -26,25 +26,25 @@ Demo.config(
 				}
 			)
 			.when(
-				"/pets/:category",
+				"/pets/:categoryID",
 				{
 					action: "standard.pets.list"
 				}
 			)
 			.when(
-				"/pets/:category/:id",
+				"/pets/:categoryID/:petID",
 				{
 					action: "standard.pets.detail.overview"
 				}
 			)
 			.when(
-				"/pets/:category/:id/diet",
+				"/pets/:categoryID/:petID/diet",
 				{
 					action: "standard.pets.detail.diet"
 				}
 			)
 			.when(
-				"/pets/:category/:id/medical-history",
+				"/pets/:categoryID/:petID/medical-history",
 				{
 					action: "standard.pets.detail.medicalHistory"
 				}

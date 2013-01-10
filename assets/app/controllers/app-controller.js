@@ -4,7 +4,7 @@
 
 	app.controller(
 		"AppController",
-		function( $scope, $route, $routeParams, $location, requestContext ) {
+		function( $scope, $route, $routeParams, $location, requestContext, _ ) {
 
 
 			// --- Define Controller Methods. ------------------- //

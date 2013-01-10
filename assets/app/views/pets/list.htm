@@ -1,16 +1,41 @@
 
-<div ng-controller="pets.ListController">
+<div ng-controller="pets.ListController" ng-switch="isLoading">
 
-	<h3>
-		Category Name Here
-	</h3>
 
-	<p>
-		List Items Here
-	</p>
+	<!-- BEGIN: Loading Sequence. -->
+	<div ng-switch-when="true">
 
-	<p>
-		&laquo; <a href="#/pets">Back to Categories</a>
-	</p>
+
+		Loading....
+
+
+	</div>
+	<!-- END: Loading Sequence. -->
+
+
+	<!-- BEGIN: View. -->
+	<div ng-switch-when="false">
+
+
+		<h3>
+			{{ category.name }}
+		</h3>
+
+		<p ng-show="category.description">
+			{{ category.description }}
+		</p>
+
+		<p>
+			List Items Here
+		</p>
+
+		<p>
+			&laquo; <a href="#/pets">Back to Categories</a>
+		</p>
+
+
+	</div>
+	<!-- END: View. -->
+
 
 </div>

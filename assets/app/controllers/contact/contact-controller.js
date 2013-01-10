@@ -4,7 +4,7 @@
 
 	app.controller(
 		"contact.ContactController",
-		function( $scope, requestContext ) {
+		function( $scope, requestContext, _ ) {
 
 
 			// --- Define Controller Methods. ------------------- //
@@ -23,7 +23,7 @@
 
 
 			// Get the render context local to this controller (and relevant params).
-			var renderContext = requestContext.getRenderContext( "contact" );
+			var renderContext = requestContext.getRenderContext( "standard.contact" );
 
 			
 			// --- Define Scope Variables. ---------------------- //

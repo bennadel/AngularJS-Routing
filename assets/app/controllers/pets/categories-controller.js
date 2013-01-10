@@ -4,7 +4,7 @@
 
 	app.controller(
 		"pets.CategoriesController",
-		function( $scope, requestContext ) {
+		function( $scope, requestContext, _ ) {
 
 
 			// --- Define Controller Methods. ------------------- //
@@ -23,7 +23,7 @@
 
 
 			// Get the render context local to this controller (and relevant params).
-			var renderContext = requestContext.getRenderContext( "pets.categories" );
+			var renderContext = requestContext.getRenderContext( "standard.pets.categories" );
 
 			
 			// --- Define Scope Variables. ---------------------- //

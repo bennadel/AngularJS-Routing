@@ -33,7 +33,7 @@ div.l-splash div.l-header {
   height: 305px ;
   position: relative ;
 }
-div.l-splash div.l-header h1 {
+div.l-splash div.l-header span.title {
   color: #FFFFFF ;
   font-family: Georgia, serif ;
   font-size: 50px ;
