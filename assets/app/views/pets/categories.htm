@@ -1,24 +1,44 @@
 
-<div ng-controller="pets.CategoriesController">
+<div ng-controller="pets.CategoriesController" ng-switch="isLoading">
 
 
-	<h1>
-		What Kind Of Snuggle-Bunny Do You Want?
-	</h1>
+	<!-- BEGIN: Loading Sequence. -->
+	<div ng-switch-when="true">
 
 
-	<!-- List the categories. -->
-	<div ng-repeat="category in categories">
+		Loading....
 
-		<h4>
-			<a href="#/pets/{{ category.id }}">{{ category.name }}</a>
-		</h4>
-
-		<p>
-			{{ category.description }}
-		</p>
 
 	</div>
+	<!-- END: Loading Sequence. -->
+
+
+	<!-- BEGIN: View. -->
+	<div ng-switch-when="false">
+
+
+		<h1>
+			What Are You Looking For?
+		</h1>
+
+
+		<!-- List the categories. -->
+		<ul class="m-category-list">
+
+			<li ng-repeat="category in categories">
+
+				<a href="#/pets/{{ category.id }}">
+					<span class="name">{{ category.name }}</span>
+					<span class="description">{{ category.description }}</span>
+				</a>
+
+			</li>
+
+		</ul>
+		
+
+	</div>
+	<!-- END: View. -->
 
 
 </div>

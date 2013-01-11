@@ -81,7 +81,9 @@
 					sex: "F",
 					size: sizes.small,
 					description: "I love chewing on shoes.",
-					background: "Lorem ipsum...."
+					background: "Annie was found in an abandoned house in Brooklyn.",
+					diet: "Annie loves raw chicken necks.",
+					medicalHistory: "Annie has all of her shots."
 				},
 				{
 					id: 2,
@@ -92,7 +94,9 @@
 					sex: "F",
 					size: sizes.small,
 					description: "I am house-trained, but when I get excited, I sometimes tinkle.",
-					background: "Lorem ipsum...."
+					background: "Voodoo was one of 17 dogs found in a hoarder's house.",
+					diet: "Voodoo will eat just about anything.",
+					medicalHistory: "Voodoo has all of his shots and is spayed."
 				},
 				{
 					id: 3,
@@ -103,7 +107,9 @@
 					sex: "F",
 					size: sizes.small,
 					description: "I want to lick your face ... a lot.",
-					background: "Lorem ipsum...."
+					background: "Frodo went on a great adventure!",
+					diet: "Frodo loves chicken and fish and peanut butter.",
+					medicalHistory: "Frodo has all of his shots."
 				},
 				{
 					id: 4,
@@ -114,7 +120,9 @@
 					sex: "M",
 					size: sizes.large,
 					description: "I'll eat anything, but newspaper makes me gassy.",
-					background: "Lorem ipsum...."
+					background: "Brook was found walking along George Washington Bridge.",
+					diet: "Brook loves any duck-based food.",
+					medicalHistory: "Brook has all of her shots."
 				},
 				{
 					id: 5,
@@ -125,7 +133,9 @@
 					sex: "M",
 					size: sizes.medium,
 					description: "I'm surprisingly active and can jump!",
-					background: "Lorem ipsum...."
+					background: "Henry's owner recently passed and was left with no family.",
+					diet: "Henry prefers dry food.",
+					medicalHistory: "Henry has all of his shots and is fixed."
 				},
 				{
 					id: 6,
@@ -136,7 +146,9 @@
 					sex: "F",
 					size: sizes.small,
 					description: "I can climb walls like a ninja!",
-					background: "Lorem ipsum...."
+					background: "Marley was found in an abandoned lot in Brooklyn.",
+					diet: "Marley prefers wet food.",
+					medicalHistory: "Marley has all of her shots and is spayed."
 				},
 				{
 					id: 7,
@@ -147,7 +159,9 @@
 					sex: "F",
 					size: sizes.small,
 					description: "I'm extremely people friend, for a cat.",
-					background: "Lorem ipsum...."
+					background: "Jamie was found under the porch.",
+					diet: "Jamie can't stand wet food.",
+					medicalHistory: "Jamie has all of her shots and need to be spayed."
 				},
 				{
 					id: 8,
@@ -158,7 +172,9 @@
 					sex: "M",
 					size: sizes.small,
 					description: "I'm an escape artist.",
-					background: "Lorem ipsum...."
+					background: "When found, Bruno was under-nourished.",
+					diet: "Bruno loves milk and anything chicken-based.",
+					medicalHistory: "Bruno has all of his shots and is fixed."
 				},
 				{
 					id: 9,
@@ -169,7 +185,9 @@
 					sex: "M",
 					size: sizes.small,
 					description: "I love lasers and chasing my own tail.",
-					background: "Lorem ipsum...."
+					background: "Wiggles was a feral cat known for his jumping.",
+					diet: "Wiggles has no specific dietary information.",
+					medicalHistory: "Wiggles has all of his shots."
 				},
 				{
 					id: 10,
@@ -180,7 +198,9 @@
 					sex: "F",
 					size: sizes.small,
 					description: "I love to cuddle at night.",
-					background: "Lorem ipsum...."
+					background: "Cotton's owner recently passed.",
+					diet: "Cotton will eat just about anything.",
+					medicalHistory: "Cotton has all of her shots and needs to be fixed."
 				}
 			];
 

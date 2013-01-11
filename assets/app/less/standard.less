@@ -10,52 +10,72 @@ div.l-standard {
 	}
 
 	div.l-header {
-		h1 {
-			color: #333333 ;
+		background: url( "../img/header-standard.jpg" ) 0px -30px no-repeat ;
+		.border-radius( 6px 6px 0px 0px ) ;
+		height: 157px ;
+		position: relative ;
+
+		span.title {
+			color: #262626 ;
 			font-family: Georgia, serif ;
-			font-size: 28px ;
+			font-size: 46px ;
 			font-weight: bold ;
-			line-height: 26px ;
-			margin: 0px 0px 0px 0px ;
-			padding: 30px 20px 30px 20px ;
+			left: 20px ;
+			line-height: 52px ;
+			position: absolute ;
+			text-shadow: 1px 1px rgba( 255, 255, 255, .8 ) ;
+			top: 28px ;
 		}
 
 		ul {
+			background-color: #F0F0F0 ;
 			border: 1px solid #333333 ;
 			border-width: 1px 0px 1px 0px ;
+			bottom: 0px ;
 			font-size: 16px ;
 			height: 35px ;
+			left: 0px ;
 			list-style-type: none ;
 			margin: 0px 0px 0px 0px ;
 			padding: 0px 0px 0px 0px ;
+			position: absolute ;
+			right: 0px ;
 
 			li {
-				background-color: #F0F0F0 ;
-				border-right: 1px solid #CCCCCC ;
+				border-right: 1px dotted #CCCCCC ;
 				float: left ;
 				margin: 0px 0px 0px 0px ;
 				padding: 0px 0px 0px 0px ;
 
 				a {
+					color: #666666 ;
 					display: block ;
 					height: 35px ;
 					line-height: 35px ;
 					text-align: center ;
 					text-decoration: none ;
 					width: 100px ;
+
+					// a -- variations.
+
+					&:hover {
+						text-decoration: underline ;
+					}
 				}
 
 				// li -- variations.
-
-				&:first-child {
-					border-left: 1px solid #CCCCCC ;
-				}
 
 				&.on {
 					a {
 						background-color: #262626 ;
 						color: #FFFFFF ;
 						font-weight: bold ;
+
+						// a -- variations.
+
+						&:hover {
+							text-decoration: none ;
+						}
 					}
 				}
 			}
@@ -63,16 +83,17 @@ div.l-standard {
 	}
 
 	div.l-body {
-		margin: 20px 20px 20px 20px ;
+		margin: 25px 20px 25px 20px ;
 	}
 
 	div.l-footer {
 		color: #999999 ;
 		font-size: 11px ;
+		line-height: 16px ;
 		margin: 20px 20px 20px 20px ;
 
 		div.description {
-			margin-bottom: 7px ;
+			margin-bottom: 5px ;
 		}
 
 		div.author {

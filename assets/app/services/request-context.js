@@ -71,7 +71,7 @@
 			function getParamAsInt( name, defaultValue ) {
 
 				// Try to parse the number.
-				var valueAsInt = ( this.getParam( name, defaultValue ) * 1 );
+				var valueAsInt = ( this.getParam( name, defaultValue || 0 ) * 1 );
 
 				// Check to see if the coersion failed. If so, return the default.
 				if ( isNaN( valueAsInt ) ) {

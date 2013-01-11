@@ -1,0 +1,55 @@
+
+ul.m-home-nav {
+	height: 102px ;
+	list-style-type: none ;
+	margin: 30px 0px 30px 0px ;
+	padding: 0px 0px 0px 0px ;
+	position: relative ;
+
+	li {
+		background-color: #F0F0F0 ;
+		border: 1px solid #CCCCCC ;
+		.border-radius( 4px 4px 4px 4px ) ;
+		float: left ;
+		height: 100px ;
+		position: absolute ;
+		text-align: center ;
+		top: 0px ;
+		width: 140px ;
+
+		a {
+			bottom: 0px ;
+			color: #333333 ;
+			left: 0px ;
+			position: absolute ;
+			right: 0px ;
+			text-decoration: none ;
+			top: 0px ;
+		}
+
+		span.declaration {
+			display: block ;
+			font-size: 12px ;
+			line-height: 17px ;
+			padding: 18px 0px 5px 0px ;
+			text-transform: uppercase ;
+		}
+
+		span.category {
+			display: block ;
+			font-size: 32px ;
+			line-height: 38px ;
+			text-decoration: underline ;
+		}
+
+		// li -- variations
+
+		&.cats {
+			left: 100px ;
+		}
+
+		&.dogs {
+			right: 100px ;
+		}
+	}
+}

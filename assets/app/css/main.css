@@ -11,6 +11,23 @@
 }
 body {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 16px ;
+  line-height: 1.6em ;
+}
+h1 {
+  font-size: 28px ;
+}
+h2 {
+  font-size: 24px ;
+}
+h3 {
+  font-size: 20px ;
+}
+h4 {
+  font-size: 16px ;
+}
+a {
+  color: #333333 ;
 }
 div.l-splash {
   margin: 30px auto 50px auto ;
@@ -26,7 +43,7 @@ div.l-splash div.l-container {
   padding: 0px 0px 1px 0px ;
 }
 div.l-splash div.l-header {
-  background: url("../img/header-puppy.jpg") 0px 0px no-repeat;
+  background: url("../img/header-splash.jpg") 0px 0px no-repeat;
   -webkit-border-radius: 6px 6px 0px 0px;
   -moz-border-radius: 6px 6px 0px 0px;
   border-radius: 6px 6px 0px 0px;
@@ -39,8 +56,6 @@ div.l-splash div.l-header span.title {
   font-size: 50px ;
   font-weight: bold ;
   line-height: 65px ;
-  margin: 0px 0px 0px 0px ;
-  padding: 0px 0px 0px 0px ;
   position: absolute ;
   right: 0px ;
   text-align: center ;
@@ -54,10 +69,11 @@ div.l-splash div.l-body {
 div.l-splash div.l-footer {
   color: #999999 ;
   font-size: 11px ;
+  line-height: 16px ;
   margin: 20px 20px 20px 20px ;
 }
 div.l-splash div.l-footer div.description {
-  margin-bottom: 7px ;
+  margin-bottom: 5px ;
 }
 div.l-splash div.l-footer div.author a {
   color: #999999 ;
@@ -80,32 +96,47 @@ div.l-standard div.l-container {
   box-shadow: 0px 0px 5px 1px #666666;
   padding: 0px 0px 1px 0px ;
 }
-div.l-standard div.l-header h1 {
-  color: #333333 ;
+div.l-standard div.l-header {
+  background: url("../img/header-standard.jpg") 0px -30px no-repeat;
+  -webkit-border-radius: 6px 6px 0px 0px;
+  -moz-border-radius: 6px 6px 0px 0px;
+  border-radius: 6px 6px 0px 0px;
+  height: 157px ;
+  position: relative ;
+}
+div.l-standard div.l-header span.title {
+  color: #262626 ;
   font-family: Georgia, serif ;
-  font-size: 28px ;
+  font-size: 46px ;
   font-weight: bold ;
-  line-height: 26px ;
-  margin: 0px 0px 0px 0px ;
-  padding: 30px 20px 30px 20px ;
+  left: 20px ;
+  line-height: 52px ;
+  position: absolute ;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.8);
+  top: 28px ;
 }
 div.l-standard div.l-header ul {
+  background-color: #F0F0F0 ;
   border: 1px solid #333333 ;
   border-width: 1px 0px 1px 0px ;
+  bottom: 0px ;
   font-size: 16px ;
   height: 35px ;
+  left: 0px ;
   list-style-type: none ;
   margin: 0px 0px 0px 0px ;
   padding: 0px 0px 0px 0px ;
+  position: absolute ;
+  right: 0px ;
 }
 div.l-standard div.l-header ul li {
-  background-color: #F0F0F0 ;
-  border-right: 1px solid #CCCCCC ;
+  border-right: 1px dotted #CCCCCC ;
   float: left ;
   margin: 0px 0px 0px 0px ;
   padding: 0px 0px 0px 0px ;
 }
 div.l-standard div.l-header ul li a {
+  color: #666666 ;
   display: block ;
   height: 35px ;
   line-height: 35px ;
@@ -113,24 +144,28 @@ div.l-standard div.l-header ul li a {
   text-decoration: none ;
   width: 100px ;
 }
-div.l-standard div.l-header ul li:first-child {
-  border-left: 1px solid #CCCCCC ;
+div.l-standard div.l-header ul li a:hover {
+  text-decoration: underline ;
 }
 div.l-standard div.l-header ul li.on a {
   background-color: #262626 ;
   color: #FFFFFF ;
   font-weight: bold ;
 }
+div.l-standard div.l-header ul li.on a:hover {
+  text-decoration: none ;
+}
 div.l-standard div.l-body {
-  margin: 20px 20px 20px 20px ;
+  margin: 25px 20px 25px 20px ;
 }
 div.l-standard div.l-footer {
   color: #999999 ;
   font-size: 11px ;
+  line-height: 16px ;
   margin: 20px 20px 20px 20px ;
 }
 div.l-standard div.l-footer div.description {
-  margin-bottom: 7px ;
+  margin-bottom: 5px ;
 }
 div.l-standard div.l-footer div.author a {
   color: #999999 ;
@@ -139,4 +174,163 @@ div.l-standard div.l-footer div.author a {
 div.l-standard div.l-footer div.author a:hover {
   color: #333333 ;
   text-decoration: underline ;
+}
+ul.m-category-list {
+  list-style-type: none ;
+  margin: 20px 0px 20px 0px ;
+  padding: 0px 0px 0px 0px ;
+}
+ul.m-category-list li {
+  margin: 0px 10px 0px 0px ;
+  padding: 0px 0px 0px 0px ;
+}
+ul.m-category-list li a {
+  border: 1px solid #CCCCCC ;
+  display: block ;
+  height: 70px ;
+  position: relative ;
+  text-decoration: none ;
+}
+ul.m-category-list li a::after {
+  content: ">";
+  font-size: 60px ;
+  position: absolute ;
+  right: 10px ;
+  top: 10px ;
+}
+ul.m-category-list li a span.name {
+  display: block ;
+  font-size: 18px ;
+  font-weight: bold ;
+  line-height: 23px ;
+  text-decoration: underline ;
+}
+ul.m-category-list li a span.description {
+  display: block ;
+}
+ul.m-home-nav {
+  height: 102px ;
+  list-style-type: none ;
+  margin: 30px 0px 30px 0px ;
+  padding: 0px 0px 0px 0px ;
+  position: relative ;
+}
+ul.m-home-nav li {
+  background-color: #F0F0F0 ;
+  border: 1px solid #CCCCCC ;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  float: left ;
+  height: 100px ;
+  position: absolute ;
+  text-align: center ;
+  top: 0px ;
+  width: 140px ;
+}
+ul.m-home-nav li a {
+  bottom: 0px ;
+  color: #333333 ;
+  left: 0px ;
+  position: absolute ;
+  right: 0px ;
+  text-decoration: none ;
+  top: 0px ;
+}
+ul.m-home-nav li span.declaration {
+  display: block ;
+  font-size: 12px ;
+  line-height: 17px ;
+  padding: 18px 0px 5px 0px ;
+  text-transform: uppercase ;
+}
+ul.m-home-nav li span.category {
+  display: block ;
+  font-size: 32px ;
+  line-height: 38px ;
+  text-decoration: underline ;
+}
+ul.m-home-nav li.cats {
+  left: 100px ;
+}
+ul.m-home-nav li.dogs {
+  right: 100px ;
+}
+div.m-pet-header {
+  position: relative ;
+}
+div.m-pet-header span.back {
+  color: #999999 ;
+  font-size: 16px ;
+  line-height: 27px ;
+  position: absolute ;
+  right: 0px ;
+  top: 0px ;
+}
+div.m-pet-header span.back a {
+  border-bottom: 1px dotted #999999 ;
+  color: #999999 ;
+  text-decoration: none ;
+}
+div.m-pet-header span.back a:hover {
+  border-color: #333333 ;
+  color: #333333 ;
+}
+ul.m-pet-properties {
+  *zoom: 1;
+  margin-bottom: 30px ;
+}
+ul.m-pet-properties:before,
+ul.m-pet-properties:after {
+  display: table;
+  content: "";
+}
+ul.m-pet-properties:after {
+  clear: both;
+}
+ul.m-pet-properties li {
+  float: left ;
+  width: 50% ;
+}
+div.m-tabs {
+  border-bottom: 1px solid #999999 ;
+  *zoom: 1;
+  margin-bottom: 15px ;
+  padding-left: 4px ;
+}
+div.m-tabs:before,
+div.m-tabs:after {
+  display: table;
+  content: "";
+}
+div.m-tabs:after {
+  clear: both;
+}
+div.m-tabs a {
+  background-color: #FFFFFF ;
+  border: 1px solid #CCCCCC ;
+  border-bottom-width: 0px ;
+  -webkit-border-radius: 3px 3px 0px 0px;
+  -moz-border-radius: 3px 3px 0px 0px;
+  border-radius: 3px 3px 0px 0px;
+  color: #666666 ;
+  float: left ;
+  margin-right: 7px ;
+  padding: 4px 15px 4px 15px ;
+  position: relative ;
+  text-decoration: none ;
+}
+div.m-tabs a:hover {
+  text-decoration: underline ;
+}
+div.m-tabs a.on {
+  border-color: #999999 ;
+  color: #333333 ;
+  font-weight: bold ;
+  padding-bottom: 5px ;
+  margin-top: -1px;
+  top: 1px ;
+}
+div.m-tabs a.on:hover {
+  text-decoration: none ;
 }

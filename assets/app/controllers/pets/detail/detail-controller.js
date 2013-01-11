@@ -3,7 +3,7 @@
 	"use strict";
 
 	app.controller(
-		"pets.ListController",
+		"pets.detail.DetailController",
 		function( $scope, $location, $q, requestContext, categoryService, petService, _ ) {
 
 
@@ -11,17 +11,17 @@
 
 
 			// I apply the remote data to the local view model.
-			function applyRemoteData( category, pets ) {
+			function applyRemoteData( category, pet ) {
 
 				$scope.category = category;
-				$scope.pets = pets;
+				$scope.pet = pet;
 
-				$scope.setWindowTitle( category.name );
-				
+				$scope.setWindowTitle( pet.name + " - " + pet.breed );
+
 			}
 
 
-			// I load the remote data from the server.
+			// I load the "remote" data from the server.
 			function loadRemoteData() {
 
 				$scope.isLoading = true;
@@ -29,7 +29,7 @@
 				var promise = $q.all(
 					[
 						categoryService.getCategoryByID( $scope.categoryID ),
-						petService.getPetsByCategoryID( $scope.categoryID )
+						petService.getPetByID( $scope.petID )
 					]
 				);
 
@@ -43,8 +43,8 @@
 					},
 					function( response ) {
 
-						// The category couldn't be loaded for some reason - possibly someone hacking with the URL. 
-						$location.path( "/pets" );
+						// The pet couldn't be loaded for some reason - possibly someone hacking with the URL. 
+						$location.path( "/pets/" + $scope.categoryID );
 
 					}
 				);
@@ -62,21 +62,22 @@
 
 
 			// Get the render context local to this controller (and relevant params).
-			var renderContext = requestContext.getRenderContext( "standard.pets.list", "categoryID" );
+			var renderContext = requestContext.getRenderContext( "standard.pets.detail", "petID" );
 
 			
 			// --- Define Scope Variables. ---------------------- //
 
 
-			// Get the ID of the category.
+			// Get the relevant route IDs.
 			$scope.categoryID = requestContext.getParam( "categoryID" );
+			$scope.petID = requestContext.getParamAsInt( "petID" );
 
 			// I flag that data is being loaded.
 			$scope.isLoading = true;
 
-			// I am the category and the list of pets that are being viewed.
+			// I hold the pet to render.
 			$scope.category = null;
-			$scope.pets = null;
+			$scope.pet = null;
 
 			// The subview indicates which view is going to be rendered on the page.
 			$scope.subview = renderContext.getNextSection();
@@ -99,12 +100,13 @@
 
 					// Get the relevant route IDs.
 					$scope.categoryID = requestContext.getParam( "categoryID" );
+					$scope.petID = requestContext.getParamAsInt( "petID" );
 
 					// Update the view that is being rendered.
 					$scope.subview = renderContext.getNextSection();
 
-					// If the relevant IDs have changed, refresh the view.
-					if ( requestContext.hasParamChanged( "categoryID" ) ) {
+					// If the relevant ID has changed, refresh the view.
+					if ( requestContext.haveParamsChanged( [ "categoryID", "petID" ] ) ) {
 
 						loadRemoteData();
 
@@ -117,8 +119,8 @@
 			// --- Initialize. ---------------------------------- //
 
 
-			// Set the interim title.
-			$scope.setWindowTitle( "Loading Category" );
+			// Set the window title.
+			$scope.setWindowTitle( "Loading Pet" );
 
 			// Load the "remote" data.
 			loadRemoteData();

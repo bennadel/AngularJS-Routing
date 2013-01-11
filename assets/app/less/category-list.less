@@ -1,0 +1,39 @@
+
+ul.m-category-list {
+	list-style-type: none ;
+	margin: 20px 0px 20px 0px ;
+	padding: 0px 0px 0px 0px ;
+
+	li {
+		margin: 0px 10px 0px 0px ;
+		padding: 0px 0px 0px 0px ;
+
+		a {
+			border: 1px solid #CCCCCC ;
+			display: block ;
+			height: 70px ;
+			position: relative ;
+			text-decoration: none ;
+
+			&::after {
+				content: ">" ;
+				font-size: 60px ;
+				position: absolute ;
+				right: 10px ;
+				top: 10px ;
+			}
+
+			span.name {
+				display: block ;
+				font-size: 18px ;
+				font-weight: bold ;
+				line-height: 23px ;
+				text-decoration: underline ;
+			}
+
+			span.description {
+				display: block ;
+			}
+		}
+	}
+}

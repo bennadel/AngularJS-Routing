@@ -1,0 +1,69 @@
+
+<div ng-controller="pets.detail.DetailController" ng-switch="isLoading">
+
+
+	<!-- BEGIN: Loading Sequence. -->
+	<div ng-switch-when="true">
+
+
+		Loading....
+
+
+	</div>
+	<!-- END: Loading Sequence. -->
+
+
+	<!-- BEGIN: View. -->
+	<div ng-switch-when="false">
+
+
+		<div class="m-pet-header">
+
+			<h1>
+				{{ pet.name }}
+			</h1>
+
+			<span class="back">
+				<a href="#/pets/{{ category.id }}">Back to {{ category.name }}</a> &raquo;
+			</span>
+
+		</div>
+
+		<p>
+			{{ pet.description }}
+		</p>
+
+		<ul class="m-pet-properties">
+			<li>
+				<strong>Breed</strong>: {{ pet.breed }}
+			</li>
+			<li>
+				<strong>Color</strong>: {{ pet.color }}
+			</li>
+			<li>
+				<strong>Sex</strong>: {{ pet.sex }}
+			</li>
+			<li>
+				<strong>Size</strong>: {{ pet.size }}
+			</li>
+		</ul>
+
+		<div class="m-tabs">
+			<a href="#/pets/{{ category.id }}/{{ pet.id }}" ng-class="{ on: ( subview == 'background' ) }">Background</a>
+			<a href="#/pets/{{ category.id }}/{{ pet.id }}/diet" ng-class="{ on: ( subview == 'diet' ) }">Diet</a>
+			<a href="#/pets/{{ category.id }}/{{ pet.id }}/medical-history" ng-class="{ on: ( subview == 'medicalHistory' ) }">Medical History</a>
+		</div>
+
+		<!-- Include View Content. -->
+		<div ng-switch="subview" class="m-tab-pane">
+			<div ng-switch-when="background" ng-include=" 'assets/app/views/pets/detail/background.htm' "></div>
+			<div ng-switch-when="diet" ng-include=" 'assets/app/views/pets/detail/diet.htm' "></div>
+			<div ng-switch-when="medicalHistory" ng-include=" 'assets/app/views/pets/detail/medical-history.htm' "></div>
+		</div>
+
+
+	</div>
+	<!-- END: View. -->
+
+
+</div>

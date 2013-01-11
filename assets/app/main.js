@@ -34,7 +34,7 @@ Demo.config(
 			.when(
 				"/pets/:categoryID/:petID",
 				{
-					action: "standard.pets.detail.overview"
+					action: "standard.pets.detail.background"
 				}
 			)
 			.when(
