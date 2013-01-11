@@ -24,6 +24,14 @@
 			// --- Define Scope Methods. ------------------------ //
 
 
+			// TODO: Flesh this out - for now, just trying to create a wrapper for alert().
+			$scope.openModalWindow = function( modalType ) {
+
+				alert( arguments[ 1 ] || "Opps: Something went wrong." );
+
+			};
+
+
 			// I update the title tag.
 			$scope.setWindowTitle = function( title ) {
 

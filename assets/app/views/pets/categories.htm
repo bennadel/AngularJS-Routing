@@ -1,13 +1,24 @@
 
 <div ng-controller="pets.CategoriesController">
 
-	<h3>
-		What Kind Of Snuggle-Bunny Do You Want?
-	</h3>
 
-	<p class="secondary-nav">
-		<a href="#/pets/dogs">Dogs</a> -
-		<a href="#/pets/cats">Cats</a>
-	</p>
+	<h1>
+		What Kind Of Snuggle-Bunny Do You Want?
+	</h1>
+
+
+	<!-- List the categories. -->
+	<div ng-repeat="category in categories">
+
+		<h4>
+			<a href="#/pets/{{ category.id }}">{{ category.name }}</a>
+		</h4>
+
+		<p>
+			{{ category.description }}
+		</p>
+
+	</div>
+
 
 </div>

@@ -17,16 +17,16 @@
 	<div ng-switch-when="false">
 
 
-		<h3>
+		<h1>
 			{{ category.name }}
-		</h3>
+		</h1>
 
 		<p ng-show="category.description">
 			{{ category.description }}
 		</p>
 
-		<p>
-			List Items Here
+		<p ng-repeat="pet in pets">
+			{{ pet.name }}
 		</p>
 
 		<p>

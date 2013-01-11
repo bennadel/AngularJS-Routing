@@ -4,16 +4,17 @@
 
 	app.controller(
 		"pets.ListController",
-		function( $scope, $location, requestContext, categoryService, _ ) {
+		function( $scope, $location, $q, requestContext, categoryService, petService, _ ) {
 
 
 			// --- Define Controller Methods. ------------------- //
 
 
 			// I apply the remote data to the local view model.
-			function applyRemoteData( category ) {
+			function applyRemoteData( category, pets ) {
 
 				$scope.category = category;
+				$scope.pets = pets;
 
 				$scope.setWindowTitle( category.name );
 				
@@ -25,19 +26,24 @@
 
 				$scope.isLoading = true;
 
-				var promise = categoryService.getCategoryByID( $scope.categoryID );
+				var promise = $q.all(
+					[
+						categoryService.getCategoryByID( $scope.categoryID ),
+						petService.getPetsByCategoryID( $scope.categoryID )
+					]
+				);
 
 				promise.then(
 					function( response ) {
 
 						$scope.isLoading = false;
 
-						applyRemoteData( response );
+						applyRemoteData( response[ 0 ], response[ 1 ] );
 
 					},
 					function( response ) {
 
-						// The category couldn't be loaded for some reason.
+						// The category couldn't be loaded for some reason - possibly someone hacking with the URL. 
 						$location.path( "/pets" );
 
 					}
