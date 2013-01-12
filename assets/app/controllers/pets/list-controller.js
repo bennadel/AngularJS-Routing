@@ -14,7 +14,7 @@
 			function applyRemoteData( category, pets ) {
 
 				$scope.category = category;
-				$scope.pets = pets;
+				$scope.pets = _.sortOnProperty( pets, "name", "asc" );
 
 				$scope.setWindowTitle( category.name );
 				
@@ -80,7 +80,7 @@
 
 			// The subview indicates which view is going to be rendered on the page.
 			$scope.subview = renderContext.getNextSection();
-			
+
 
 			// --- Bind To Scope Events. ------------------------ //
 

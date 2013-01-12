@@ -75,13 +75,13 @@
 			// I flag that data is being loaded.
 			$scope.isLoading = true;
 
-			// I hold the pet to render.
+			// I hold the category and pet to render.
 			$scope.category = null;
 			$scope.pet = null;
 
 			// The subview indicates which view is going to be rendered on the page.
 			$scope.subview = renderContext.getNextSection();
-			
+
 
 			// --- Bind To Scope Events. ------------------------ //
 

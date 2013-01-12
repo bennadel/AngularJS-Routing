@@ -17,23 +17,30 @@
 	<div ng-switch-when="false">
 
 
-		<h1>
-			{{ category.name }}
-		</h1>
+		<div class="m-pet-list-header">
 
-		<p ng-show="category.description">
+			<h1>
+				{{ category.name }}
+			</h1>
+
+			<span class="back">
+				<a href="#/pets">Back to Categories</a> &raquo;
+			</span>
+
+		</div>
+
+		<p>
 			{{ category.description }}
 		</p>
 
-		<p ng-repeat="pet in pets">
-			
-			<a href="#/pets/{{ category.id }}/{{ pet.id }}">{{ pet.name }}</a>
+		<ul>
+			<li ng-repeat="pet in pets">
 
-		</p>
+				<a href="#/pets/{{ category.id }}/{{ pet.id }}">{{ pet.name }}</a> - 
+				{{ pet.breed }}
 
-		<p>
-			&laquo; <a href="#/pets">Back to Categories</a>
-		</p>
+			</li>
+		</ul>
 
 
 	</div>

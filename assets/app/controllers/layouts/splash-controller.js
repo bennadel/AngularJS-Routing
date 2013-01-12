@@ -34,7 +34,7 @@
 
 			// Get the current year for copyright output.
 			$scope.copyrightYear = ( new Date() ).getFullYear();
-			
+
 
 			// --- Bind To Scope Events. ------------------------ //
 

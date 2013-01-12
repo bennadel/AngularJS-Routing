@@ -31,8 +31,8 @@
 
 			// The subview indicates which view is going to be rendered on the page.
 			$scope.subview = renderContext.getNextSection();
-			
 
+			
 			// --- Bind To Scope Events. ------------------------ //
 
 

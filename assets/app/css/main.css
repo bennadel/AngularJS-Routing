@@ -14,6 +14,12 @@ body {
   font-size: 16px ;
   line-height: 1.6em ;
 }
+h1,
+h2,
+h3,
+h4 {
+  font-family: Georgia, serif ;
+}
 h1 {
   font-size: 28px ;
 }
@@ -181,31 +187,53 @@ ul.m-category-list {
   padding: 0px 0px 0px 0px ;
 }
 ul.m-category-list li {
-  margin: 0px 10px 0px 0px ;
+  margin: 0px 0px 13px 0px ;
   padding: 0px 0px 0px 0px ;
 }
 ul.m-category-list li a {
+  background-color: #F0F0F0 ;
   border: 1px solid #CCCCCC ;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
   display: block ;
   height: 70px ;
   position: relative ;
   text-decoration: none ;
 }
 ul.m-category-list li a::after {
-  content: ">";
-  font-size: 60px ;
+  background-color: #FFFFFF ;
+  -webkit-border-radius: 40px 40px 40px 40px;
+  -moz-border-radius: 40px 40px 40px 40px;
+  border-radius: 40px 40px 40px 40px;
+  color: #333333 ;
+  content: "\00BB";
+  display: none ;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 30px ;
+  height: 40px ;
+  line-height: 35px ;
+  margin-top: -20px;
   position: absolute ;
-  right: 10px ;
-  top: 10px ;
+  right: 15px ;
+  text-align: center ;
+  text-index: 3px ;
+  top: 50% ;
+  width: 40px ;
 }
 ul.m-category-list li a span.name {
   display: block ;
   font-size: 18px ;
   font-weight: bold ;
   line-height: 23px ;
+  padding: 12px 0px 3px 15px ;
   text-decoration: underline ;
 }
 ul.m-category-list li a span.description {
+  display: block ;
+  padding: 0px 0px 0px 15px ;
+}
+ul.m-category-list li a:hover::after {
   display: block ;
 }
 ul.m-home-nav {
@@ -276,6 +304,26 @@ div.m-pet-header span.back a:hover {
   border-color: #333333 ;
   color: #333333 ;
 }
+div.m-pet-list-header {
+  position: relative ;
+}
+div.m-pet-list-header span.back {
+  color: #999999 ;
+  font-size: 16px ;
+  line-height: 27px ;
+  position: absolute ;
+  right: 0px ;
+  top: 0px ;
+}
+div.m-pet-list-header span.back a {
+  border-bottom: 1px dotted #999999 ;
+  color: #999999 ;
+  text-decoration: none ;
+}
+div.m-pet-list-header span.back a:hover {
+  border-color: #333333 ;
+  color: #333333 ;
+}
 ul.m-pet-properties {
   *zoom: 1;
   margin-bottom: 30px ;
@@ -291,6 +339,20 @@ ul.m-pet-properties:after {
 ul.m-pet-properties li {
   float: left ;
   width: 50% ;
+}
+div.m-random-pet {
+  border-top: 1px dashed #CCCCCC ;
+  color: #999999 ;
+  font-size: 12px ;
+  font-style: italic ;
+  line-height: 17px ;
+  padding: 15px 0px 0px 0px ;
+}
+div.m-random-pet a {
+  color: #999999 ;
+}
+div.m-random-pet a:hover {
+  color: #333333 ;
 }
 div.m-tabs {
   border-bottom: 1px solid #999999 ;

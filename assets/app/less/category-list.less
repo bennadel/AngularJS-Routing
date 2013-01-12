@@ -5,22 +5,35 @@ ul.m-category-list {
 	padding: 0px 0px 0px 0px ;
 
 	li {
-		margin: 0px 10px 0px 0px ;
+		margin: 0px 0px 13px 0px ;
 		padding: 0px 0px 0px 0px ;
 
 		a {
+			background-color: #F0F0F0 ;
 			border: 1px solid #CCCCCC ;
+			.border-radius( 4px 4px 4px 4px ) ;
 			display: block ;
 			height: 70px ;
 			position: relative ;
 			text-decoration: none ;
 
 			&::after {
-				content: ">" ;
-				font-size: 60px ;
+				background-color: #FFFFFF ;
+				.border-radius( 40px 40px 40px 40px ) ;
+				color: #333333 ;
+				content: "\00BB" ;
+				display: none ;
+				font-family: Tahoma, Geneva, sans-serif ;
+				font-size: 30px ;
+				height: 40px ;
+				line-height: 35px ;
+				margin-top: -20px ;
 				position: absolute ;
-				right: 10px ;
-				top: 10px ;
+				right: 15px ;
+				text-align: center ;
+				text-index: 3px ;
+				top: 50% ;
+				width: 40px ;
 			}
 
 			span.name {
@@ -28,11 +41,21 @@ ul.m-category-list {
 				font-size: 18px ;
 				font-weight: bold ;
 				line-height: 23px ;
+				padding: 12px 0px 3px 15px ;
 				text-decoration: underline ;
 			}
 
 			span.description {
 				display: block ;
+				padding: 0px 0px 0px 15px ;
+			}
+
+			// a -- variations.
+
+			&:hover {
+				&::after {
+					display: block ;
+				}
 			}
 		}
 	}

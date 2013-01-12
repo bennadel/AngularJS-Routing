@@ -50,6 +50,35 @@
 			}
 
 
+			// I get a random pet in the given category, less the given pet.
+			function getRandomPetExcluding( categoryID, excludePetID ) {
+
+				var deferred = $q.defer();
+				var pets = _.filterWithProperty( cache, "categoryID", categoryID );
+
+				if ( pets ) {
+
+					var index = _.random( 0, ( pets.length - 1 ) );
+
+					while ( pets[ index ].id === excludePetID ) {
+
+						index = _.random( 0, ( pets.length - 1 ) );
+
+					}
+
+					deferred.resolve( ng.copy( pets[ index ] ) );
+
+				} else {
+
+					deferred.reject();
+
+				}
+
+				return( deferred.promise );
+
+			}
+
+
 			// ---------------------------------------------- //
 			// ---------------------------------------------- //
 
@@ -212,7 +241,8 @@
 			// Return the public API.
 			return({
 				getPetByID: getPetByID,
-				getPetsByCategoryID: getPetsByCategoryID
+				getPetsByCategoryID: getPetsByCategoryID,
+				getRandomPetExcluding: getRandomPetExcluding
 			});
 
 

@@ -24,6 +24,20 @@
 			// --- Define Scope Methods. ------------------------ //
 
 
+			// I get the current time for use when display the time a controller was rendered.
+			// This way, we can see the difference between when a controller was instantiated
+			// and when it was re-populated with data.
+			$scope.getInstanceTime = function() {
+
+				var now = new Date();
+				var timeString = now.toTimeString();
+				var instanceTime = timeString.match( /\d+:\d+:\d+/i );
+
+				return( instanceTime[ 0 ] );
+
+			};
+
+
 			// TODO: Flesh this out - for now, just trying to create a wrapper for alert().
 			$scope.openModalWindow = function( modalType ) {
 

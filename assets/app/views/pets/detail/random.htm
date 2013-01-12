@@ -1,0 +1,15 @@
+
+<div ng-controller="pets.detail.RandomController" ng-switch="isLoading">
+
+
+	<!-- BEGIN: View. -->
+	<div ng-switch-when="false" class="m-random-pet">
+
+		You may also be interested in,
+		<a href="#/pets/{{ categoryID }}/{{ pet.id }}">{{ pet.name }} - {{ pet.breed }}</a>.
+
+	</div>
+	<!-- END: View. -->
+	
+
+</div>
