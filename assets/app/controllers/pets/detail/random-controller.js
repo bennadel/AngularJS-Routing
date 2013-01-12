@@ -24,7 +24,7 @@
 				$scope.isLoading = true;
 
 				var promise = petService.getRandomPetExcluding( $scope.categoryID, $scope.petID );
-					
+
 				promise.then(
 					function( response ) {
 
@@ -53,7 +53,7 @@
 
 
 			// Get the render context local to this controller (and relevant params).
-			var renderContext = requestContext.getRenderContext( "standard.pets.detail.random", [ "categoryID", "petID" ] );
+			var renderContext = requestContext.getRenderContext( "standard.pets.detail", [ "categoryID", "petID" ] );
 
 			
 			// --- Define Scope Variables. ---------------------- //

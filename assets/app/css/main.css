@@ -35,6 +35,24 @@ h4 {
 a {
   color: #333333 ;
 }
+div.l-loading {
+  background-color: #262626 ;
+  bottom: 0px ;
+  left: 0px ;
+  position: fixed ;
+  right: 0px ;
+  top: 0px ;
+}
+div.l-loading p {
+  color: #F0F0F0 ;
+  font-size: 12px ;
+  font-style: italic ;
+  left: 0px ;
+  position: absolute ;
+  text-align: center ;
+  top: 48% ;
+  width: 100% ;
+}
 div.l-splash {
   margin: 30px auto 50px auto ;
   width: 600px ;
