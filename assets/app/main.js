@@ -1,6 +1,6 @@
 
 // Create an application module for our demo.
-var Demo = angular.module( "Demo", [] );
+var Demo = angular.module( "Demo", ['ngRoute'] );
 
 // Configure the routing. The $routeProvider will be automatically injected into 
 // the configurator.
